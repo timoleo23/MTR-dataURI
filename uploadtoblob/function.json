@@ -1,0 +1,26 @@
+{
+  "bindings": [{
+          "authLevel": "anonymous",
+          "type": "httpTrigger",
+          "name": "req",
+          "direction": "in",
+          "dataType": "binary",
+          "methods": [
+              "post"
+          ]
+      },
+      {
+          "type": "http",
+          "direction": "out",
+          "name": "response"
+      },
+      {
+          "name": "storage",
+          "type": "blob",
+          "path": "uploads/{filename}",
+          "direction": "out",
+          "connection": "AzureWebJobsStorage"
+      }
+
+  ]
+}

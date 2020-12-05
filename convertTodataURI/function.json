@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "name": "storage",
+      "type": "blob",
+      "path": "uploads/{filename}",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in",
+      "dataType": "binary"
+    },    
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
